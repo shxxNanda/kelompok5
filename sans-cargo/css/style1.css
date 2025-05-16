@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  flex-basis: calc(33.33% - 20px); /* Setiap kartu mengambil sepertiga dari lebar kontainer */
+  margin-bottom: 20px;
+}
+
+.info-card i {
+  font-size: 36px; /* Perbesar ikon */
+  color: #007bff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.info-card p {
+  font-size: 14px; /* Perkecil tulisan bawah */
+  color: #888;
+  margin: 0;
+}
+
+.owl-carousel .testimonial {
+  margin: 0 10px;
+}
+
+.service-section {
+  padding: 60px 0;
+}
+
+.section-subtitle {
+  color: #fcb900;
+  font-weight: 600;
+  display: block;
+  font-size: 1.2rem;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.btn-success {
+  background-color: #198754;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
+.ftco-cover-1 {
+  height: 20vh; /* atau 25vh untuk lebih kecil lagi */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-weight: 1200; /* atau bold */
+}
+
+
+
+
+
