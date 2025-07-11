@@ -1,79 +1,141 @@
+/* === Global Reset & Body === */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #f7f7f7;
-  padding: 20px;
+  padding: 10px;
+  margin: 0;
 }
 
+/* === Headings === */
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 6px;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   color: orange;
 }
 
+/* === Section Titles === */
+.section-subtitle {
+  color: #fcb900;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* === Contact Info Cards === */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .info-card {
   background-color: #fff;
   border-radius: 12px;
-  padding: 20px;
-  width: 220px;
+  padding: 12px;
+  width: 200px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  flex-basis: calc(33.33% - 20px); /* Setiap kartu mengambil sepertiga dari lebar kontainer */
-  margin-bottom: 20px;
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 12px;
 }
 
 .info-card i {
-  font-size: 36px; /* Perbesar ikon */
+  font-size: 32px;
   color: #007bff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: block;
 }
 
 .info-card h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-weight: 700;
 }
 
 .info-card p {
-  font-size: 14px; /* Perkecil tulisan bawah */
+  font-size: 13px;
   color: #888;
   margin: 0;
 }
 
+/* === Hero Section (Top Banner) === */
+.ftco-cover-1 {
+  height: 15vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Buttons === */
+.btn-success {
+  background-color: #198754;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* === Form === */
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+  padding: 8px 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* === Testimonials / Carousel === */
 .owl-carousel .testimonial {
   margin: 0 10px;
 }
 
+/* === Services Section === */
 .service-section {
-  padding: 60px 0;
-}
-
-.section-subtitle {
-  color: #fcb900;
-  font-weight: 600;
-  display: block;
-  font-size: 1.2rem;
-}
-
-.section-title {
-  font-weight: bold;
-  font-size: 2.5rem;
+  padding: 40px 0;
 }
 
 .service-item img {
@@ -82,33 +144,48 @@ h2 {
   border-radius: 8px;
 }
 
-.btn-success {
-  background-color: #198754;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 5px;
-  margin-top: 15px;
+/* === General Sections === */
+.site-section {
+  padding: 30px 0 !important;
 }
 
-.btn-success:hover {
-  background-color: #157347;
+/* === Footer === */
+.site-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
 }
 
-.ftco-cover-1 {
-  height: 20vh; /* atau 25vh untuk lebih kecil lagi */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.site-footer h2.footer-heading {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
-.hero-title {
-  font-weight: 1200; /* atau bold */
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
+.site-footer a:hover {
+  text-decoration: underline;
+}
 
+.site-footer ul {
+  padding: 0;
+  list-style: none;
+}
 
+.site-footer ul li {
+  margin-bottom: 8px;
+}
 
+.contact-box p {
+  margin-bottom: 6px;
+}
 
+.contact-box i {
+  margin-right: 6px;
+  color: #ffffffee;
+}
