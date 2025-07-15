@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title> Sans Cargo </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/custom-sticky.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+
+
+            <div class="site-logo">
+              <a href="index.html" class="text-black"><span class="text-primary"> Sans Cargo </span></a>
+            </div>
+
+            <div class="col-12">
+                <nav class="site-navigation text-right ml-auto " role="navigation">
+  
+                  <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Layanan</a></li>
+  
+                    <li>
+                      <a href="about.html" class="nav-link">Tentang Kami</a>
+                      
+                    </li>
+                    <li>
+                      <a href="konversi.html" class="nav-link">Cek Konverter</a>
+                      
+                    </li>
+
+                    <li><a href="contact.html" class="nav-link">Hubungi Kami</a></li>
+                  </ul>
+                </nav>
+            </div>
+
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </div>
+
+      </header>
+      <div class="ftco-blocks-cover-1">
+        <div class="ftco-cover-1 overlay" style="background-image: url('images/cargo2.jpg'); height: 20vh; background-size: cover; background-position: center;">
+          <div class="container">
+            <div class="row align-items-center justify-content-center text-center">
+              <div class="col-lg-6">
+                <h1 class="hero-title">Cek Konversi Mata Uang</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+</head>
+<section class="site-section">
+  <div class="row justify-content-center align-items-center">
+    
+    <!-- Kolom Kiri: Form Konversi -->
+    <div class="col-md-6">
+      <div class="currency-converter text-left">
+        <h2>KONVERTER MATA UANG</h2>
+
+        <label for="from">Dari:</label>
+        <select id="from">
+          <option value="CNY">CNY (Yuan)</option>
+          <option value="IDR">IDR (Rupiah)</option>
+        </select>
+
+        <label for="to">Ke:</label>
+        <select id="to">
+          <option value="IDR">IDR (Rupiah)</option>
+          <option value="CNY">CNY (Yuan)</option>
+        </select>
+
+        <label for="amount">Jumlah:</label>
+        <input type="number" id="amount" placeholder="Masukkan jumlah">
+
+        <button onclick="konversiMataUang()">Konversi</button>
+
+        <div class="result" id="hasil">Hasil konversi akan muncul di sini</div>
+      </div>
+    </div>
+
+    <!-- Kolom Kanan: Gambar -->
+<!-- Kolom Kanan: Gambar -->
+<div class="col-md-6 d-flex align-items-stretch">
+  <div class="w-100 d-flex flex-column justify-content-center align-items-center shadow-sm rounded">
+    <img src="images/uang.jpg" alt="Gambar Mata Uang CNY dan IDR" class="img-fluid mb-2" style="max-height: 350px; object-fit: contain;">
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+  <script>
+    function konversiMataUang() {
+      const from = document.getElementById("from").value;
+      const to = document.getElementById("to").value;
+      const amount = parseFloat(document.getElementById("amount").value);
+      const hasilDiv = document.getElementById("hasil");
+
+      if (isNaN(amount) || amount <= 0) {
+        hasilDiv.innerHTML = "Masukkan jumlah yang valid.";
+        return;
+      }
+
+      let hasil;
+
+      // Nilai tukar statis
+      const kurs = 2273; // 1 CNY = 2300 IDR
+
+      if (from === "CNY" && to === "IDR") {
+        hasil = amount * kurs;
+        hasilDiv.innerHTML = `${amount} CNY = ${hasil.toLocaleString("id-ID")} IDR`;
+      } else if (from === "IDR" && to === "CNY") {
+        hasil = amount / kurs;
+        hasilDiv.innerHTML = `${amount.toLocaleString("id-ID")} IDR = ${hasil.toFixed(2)} CNY`;
+      } else {
+        hasilDiv.innerHTML = "Pilih kombinasi mata uang yang berbeda.";
+      }
+    }
+  </script>
+
+  <div class="text-center mt-4" style="margin-bottom: 60px;">
+  <p style="font-size: 1.1rem; color: #333;">
+    Berminat untuk menukar mata uang <strong>RMB</strong> ke <strong>IDR</strong> atau sebaliknya?<br>
+    Hubungi kami lebih lanjut untuk informasi lainnya.
+  </p>
+  <a href="contact.html" class="btn btn-success mt-2">Hubungi Kami</a>
+</div>
+
+<!--footer-->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-7">
+                  <h2 class="footer-heading mb-4">Sans Cargo</h2>
+                  <p>Sans Cargo adalah perusahaan jasa forwarder profesional yang telah beroperasi selama lebih dari 3 tahun, khusus melayani pengiriman barang dari China ke Indonesia. Dengan pengalaman yang terus berkembang, Sans Cargo hadir sebagai solusi terpercaya bagi pelaku usaha, importir, maupun individu yang membutuhkan layanan logistik internasional secara efisien dan aman.</p>
+                </div>
+                <div class="col-md-4 ml-auto">
+                  <h2 class="footer-heading mb-4">Features</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Layanan</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ml-auto">
+              <h2 class="footer-heading mb-4">Follow Us</h2>
+              <div class="contact-box">
+                <p>
+                  <i class="icon-instagram"></i>
+                  <a href="https://www.instagram.com/sans_cargo/ target="_blank">
+                    sans_cargo
+                  </a>
+                </p>
+                <p>
+                  <i class="icon-whatsapp"></i>
+                  <a href="https://api.whatsapp.com/send?phone=6289601322212" target="_blank">
+                    Admin - 0896 01322212
+                  </a>
+                </p>
+                <p>
+                  <i class="icon-map"></i>
+                  <a href="https://maps.app.goo.gl/RkuVQe323TiL1b3c7"
+                    target="_blank">
+                    Cimone, Kec. Karawaci, Kota Tangerang, Banten
+                  </a>
+                </p>
+              </div>
+            </div>
+
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </footer>
+      </div>
+  </div>
+  
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.sticky.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.animateNumber.min.js"></script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/aos.js"></script>
+  
+      <script src="js/main.js"></script>
+  
+  
+    </body>
+  
+  </html>
